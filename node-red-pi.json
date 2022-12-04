@@ -1,0 +1,3271 @@
+[
+    {
+        "id": "498c5981a3cf8b8b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78f98ed9.d2e28",
+        "type": "tab",
+        "label": "AIRKEY",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0aabcd8de09bc616",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "684c8ad7d6afc7ea",
+        "type": "ui_tab",
+        "name": "Admin",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "60ee1aca85171a95",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "eb861a20c6606199",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "684c8ad7d6afc7ea",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6bd4aa5ab86a6177",
+        "type": "mqtt-broker",
+        "name": "Ubuntu",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f49c7cb8.62a2a",
+        "type": "mqtt-broker",
+        "name": "VPS",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8e979139.1239a",
+        "type": "ui_group",
+        "name": "Lớp 6A",
+        "tab": "41517df2.fd96b4",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2d83d0a3.3327c",
+        "type": "ui_group",
+        "name": "XOA",
+        "tab": "41517df2.fd96b4",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "625872f.40b1e8c",
+        "type": "ui_group",
+        "name": "Lớp 7A",
+        "tab": "41517df2.fd96b4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ca8f244c.2f5988",
+        "type": "ui_group",
+        "name": "Lớp 8A",
+        "tab": "41517df2.fd96b4",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e5116d1e.b14a1",
+        "type": "ui_group",
+        "name": "Lớp 9A",
+        "tab": "41517df2.fd96b4",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "41517df2.fd96b4",
+        "type": "ui_tab",
+        "name": "TM1637",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": true,
+        "hidden": true
+    },
+    {
+        "id": "bf08abf3f251f3f0",
+        "type": "ui_group",
+        "name": "Tổng điểm",
+        "tab": "41517df2.fd96b4",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e2bac96.b321b",
+        "type": "ui_group",
+        "name": "S1",
+        "tab": "62712bbf.888b94",
+        "order": 1,
+        "disp": true,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "e0e6934.ab83e7",
+        "type": "ui_group",
+        "name": "S2",
+        "tab": "62712bbf.888b94",
+        "order": 2,
+        "disp": true,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "62712bbf.888b94",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "cacc8d8bb07a40c2",
+        "type": "ui_tab",
+        "name": "DIEMDANH",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9e98e8803f8856f0",
+        "type": "ui_group",
+        "name": "Lớp 6A",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "33db361b4df33800",
+        "type": "ui_group",
+        "name": "Lớp 7A",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "acb1e6e3a85aeecf",
+        "type": "ui_group",
+        "name": "Lớp 8A",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d00512902b8013dc",
+        "type": "ui_group",
+        "name": "Lớp 9A",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bc39bd6ccd8a2dd6",
+        "type": "ui_group",
+        "name": "Tổng SĨ SỐ",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "266a4956a25e56d2",
+        "type": "ui_group",
+        "name": "TỔNG BÁN TRÚ",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ba3ab2ac31d1211f",
+        "type": "ui_group",
+        "name": "Xóa",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 8,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d6f8a9f8ff3bbe96",
+        "type": "ui_tab",
+        "name": "Tab 5",
+        "icon": "dashboard",
+        "order": 5
+    },
+    {
+        "id": "6ed381ea5e69ca28",
+        "type": "ui_group",
+        "name": "TRƯỜNG PTDTBT THCS TẢ THÀNG",
+        "tab": "cacc8d8bb07a40c2",
+        "order": 1,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8e11103e59ba7f57",
+        "type": "ui_group",
+        "name": "Reset thu tu ban phim",
+        "tab": "684c8ad7d6afc7ea",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ab808a3b4f91f61e",
+        "type": "ip",
+        "z": "498c5981a3cf8b8b",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "017dab880723a6ac",
+                "79ad51974d1a9e31"
+            ]
+        ]
+    },
+    {
+        "id": "017dab880723a6ac",
+        "type": "debug",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d84d94b52abe3d3a",
+        "type": "inject",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "ab808a3b4f91f61e"
+            ]
+        ]
+    },
+    {
+        "id": "79ad51974d1a9e31",
+        "type": "function",
+        "z": "498c5981a3cf8b8b",
+        "name": "internalIPv4",
+        "func": "msg.payload = msg.payload.internalIPv4;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 60,
+        "wires": [
+            [
+                "61b315811dba8622",
+                "0ea824f4d1f0ea00"
+            ]
+        ]
+    },
+    {
+        "id": "61b315811dba8622",
+        "type": "ui_text",
+        "z": "498c5981a3cf8b8b",
+        "group": "eb861a20c6606199",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IP",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "15fbd061ab3ce8b1",
+        "type": "exec",
+        "z": "498c5981a3cf8b8b",
+        "command": "./ngrok http 1880",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "119aa7fc2bcd2910"
+            ],
+            [
+                "425c89c9085f3d58"
+            ],
+            [
+                "5ba8e6063bfa5aee"
+            ]
+        ]
+    },
+    {
+        "id": "3ced8780abd3b990",
+        "type": "inject",
+        "z": "498c5981a3cf8b8b",
+        "name": "Ngrok",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "15fbd061ab3ce8b1"
+            ]
+        ]
+    },
+    {
+        "id": "119aa7fc2bcd2910",
+        "type": "debug",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5ba8e6063bfa5aee",
+        "type": "debug",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 518,
+        "y": 333,
+        "wires": []
+    },
+    {
+        "id": "425c89c9085f3d58",
+        "type": "debug",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5d6cb192789e1ba8",
+        "type": "exec",
+        "z": "498c5981a3cf8b8b",
+        "command": "sudo chromium-browser --start-fullscreen --start-maximized http://127.0.0.1:1880",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 460,
+        "y": 540,
+        "wires": [
+            [],
+            [],
+            [
+                "017dab880723a6ac"
+            ]
+        ]
+    },
+    {
+        "id": "a26e3b4f5a641399",
+        "type": "inject",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 560,
+        "wires": [
+            [
+                "5d6cb192789e1ba8"
+            ]
+        ]
+    },
+    {
+        "id": "0ea824f4d1f0ea00",
+        "type": "debug",
+        "z": "498c5981a3cf8b8b",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a897b976.f25808",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "8e979139.1239a",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "name": "BAN PHIM 1",
+        "label": "",
+        "format": " <center>Sĩ Số<br><font size=48>{{msg.diemto1}} / {{msg.tong_diemto1}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1110,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "afb56c49.28ac4",
+        "type": "ui_button",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "group": "2d83d0a3.3327c",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "passthru": false,
+        "label": "Xoa",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0/0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "e2f057f676745758"
+            ]
+        ]
+    },
+    {
+        "id": "5152bc2c.d40034",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "625872f.40b1e8c",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "name": "BAN PHIM 2",
+        "label": "",
+        "format": " <center><font size=48>{{msg.diemto2}} / {{msg.tong_diemto2}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1070,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d994f16d.aa91a",
+        "type": "mqtt in",
+        "z": "78f98ed9.d2e28",
+        "name": "AIR_KEYBOARD_3",
+        "topic": "AIR_KEYBOARD_3",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 400,
+        "wires": [
+            [
+                "388715b27bafc125"
+            ]
+        ]
+    },
+    {
+        "id": "87475251.62a87",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "ca8f244c.2f5988",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "name": "BAN PHIM 3",
+        "label": "",
+        "format": " <center><font size=48>{{msg.diemto3}} / {{msg.tong_diemto3}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1070,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "239d57b8.14e6b8",
+        "type": "mqtt in",
+        "z": "78f98ed9.d2e28",
+        "name": "AIR_KEYBOARD_4",
+        "topic": "AIR_KEYBOARD_4",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 440,
+        "wires": [
+            [
+                "3bab9a8009e42661"
+            ]
+        ]
+    },
+    {
+        "id": "b01d57db.b50668",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "e5116d1e.b14a1",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "name": "BAN PHIM 4",
+        "label": "",
+        "format": " <center><font size=48> {{msg.diemto4}} / {{msg.tong_diemto4}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1050,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "39a84c298aa2b338",
+        "type": "mqtt in",
+        "z": "78f98ed9.d2e28",
+        "name": "AIR_KEYBOARD_1",
+        "topic": "AIR_KEYBOARD_1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 240,
+        "wires": [
+            [
+                "f813bcb9e2044c9c"
+            ]
+        ]
+    },
+    {
+        "id": "0670ac91a5661bb3",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "diem_to2",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"diem_to2\", diem); \n  }\nvar timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\nmsg.payload = diem;\nvar tongdiem = flow.get(\"tong_diem\") || 0;\nmsg.tongdiem = tongdiem;\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2312375a73774d67",
+        "type": "mqtt in",
+        "z": "78f98ed9.d2e28",
+        "name": "AIR_KEYBOARD_2",
+        "topic": "AIR_KEYBOARD_2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "ab155cabe767e07a"
+            ]
+        ]
+    },
+    {
+        "id": "5836e81708d9c1a3",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "bf08abf3f251f3f0",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "name": "TONG DIEM",
+        "label": "",
+        "format": "<font size = 48>{{msg.payload}} ",
+        "layout": "col-center",
+        "className": "",
+        "x": 890,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "61b6bd29a1109f36",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tongdiem",
+        "func": "var diem_to1 =  flow.get(\"diem_to1\") || 0;\nvar diem_to2 =  flow.get(\"diem_to2\") || 0;\nvar diem_to3 =  flow.get(\"diem_to3\") || 0;\nvar diem_to4 =  flow.get(\"diem_to4\") || 0;\nvar tong = 0;\n  if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to1;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to2;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to3;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to4;\n  }\n  msg.payload = tong;\n  flow.set(\"tong_diem\",tong);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 520,
+        "wires": [
+            [
+                "5836e81708d9c1a3"
+            ]
+        ]
+    },
+    {
+        "id": "e6175927db277324",
+        "type": "inject",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 310,
+        "y": 520,
+        "wires": [
+            [
+                "61b6bd29a1109f36"
+            ]
+        ]
+    },
+    {
+        "id": "8fcdd3dbb6836816",
+        "type": "ui_button",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "group": "bf08abf3f251f3f0",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Reset Tổng",
+        "tooltip": "Xóa tổng điểm",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "2f67903964efdfb2"
+            ]
+        ]
+    },
+    {
+        "id": "2f67903964efdfb2",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "diem",
+        "func": " var diem = 0;\n flow.set(\"diem_to1\", diem); \n  flow.set(\"diem_to2\", diem); \n   flow.set(\"diem_to3\", diem); \n    flow.set(\"diem_to4\", diem); \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 580,
+        "wires": [
+            [
+                "61b6bd29a1109f36"
+            ]
+        ]
+    },
+    {
+        "id": "c3c68333.62bad",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "lst",
+        "func": "\nvar text = new Date().toLocaleString();\nmsg.payload = text;\nnode.status({fill:\"green\",shape:\"dot\",text:text});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2f057f676745758",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "reset_diem",
+        "func": "msg.diemto1 =   0 ; \nmsg.diemto2 =   0 ; \nmsg.diemto3 =  0 ; \nmsg.diemto4 =    0 ; \n\n      \n\nmsg.tong_diemto1 = flow.get(\"tong_diemto1\") || 0; \nmsg.tong_diemto2 = flow.get(\"tong_diemto2\") || 0; \nmsg.tong_diemto3 = flow.get(\"tong_diemto3\") || 0; \nmsg.tong_diemto4 = flow.get(\"tong_diemto4\") || 0; \n\n\nmsg.tongdiem = 0;\nflow.set(\"tong_diem\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 60,
+        "wires": [
+            [
+                "a897b976.f25808",
+                "5152bc2c.d40034",
+                "87475251.62a87",
+                "b01d57db.b50668",
+                "f52b2e03bb3cc085"
+            ]
+        ]
+    },
+    {
+        "id": "5f9a4f75ae1c85f3",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tong_diem",
+        "func": "  flow.set(\"tong_diem\",0);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 620,
+        "wires": [
+            [
+                "5836e81708d9c1a3"
+            ]
+        ]
+    },
+    {
+        "id": "f813bcb9e2044c9c",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tongdiem",
+        "func": "var diem = parseInt(msg.payload);\nvar so_lan_nhan_ban_phim1 = flow.get(\"so_lan_nhan_ban_phim1\") || 0; \n\n  if (Number.isInteger(diem)){\n      flow.set(\"diem_to1\", diem); \n      so_lan_nhan_ban_phim1++;\n      flow.set(\"so_lan_nhan_ban_phim1\",so_lan_nhan_ban_phim1);\n  }\nmsg.so_lan_nhan_ban_phim1 = so_lan_nhan_ban_phim1;\n\nif (msg.so_lan_nhan_ban_phim1%2 == 1){\n     flow.set(\"siso\",diem);\n \n}else{\n     flow.set(\"bantru\",diem);\n} \n\n\n\n \nvar timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\nmsg.payload = diem;\n\n\nvar diem_to1 =  flow.get(\"diem_to1\") || 0;\nvar diem_to2 =  flow.get(\"diem_to2\") || 0;\nvar diem_to3 =  flow.get(\"diem_to3\") || 0;\nvar diem_to4 =  flow.get(\"diem_to4\") || 0;\nvar tong = 0;\n  if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to1;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to2;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to3;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to4;\n  }\n\n  flow.set(\"tong_diem\",tong);\n  msg.tongdiem = tong;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "8bb55f774314839c"
+            ]
+        ]
+    },
+    {
+        "id": "ab155cabe767e07a",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tongdiem",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"diem_to2\", diem); \n  }\nvar timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\nmsg.payload = diem;\n\n\nvar diem_to1 =  flow.get(\"diem_to1\") || 0;\nvar diem_to2 =  flow.get(\"diem_to2\") || 0;\nvar diem_to3 =  flow.get(\"diem_to3\") || 0;\nvar diem_to4 =  flow.get(\"diem_to4\") || 0;\nvar tong = 0;\n  if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to1;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to2;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to3;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to4;\n  }\n\n  flow.set(\"tong_diem\",tong);\n  msg.tongdiem = tong;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "8bb55f774314839c"
+            ]
+        ]
+    },
+    {
+        "id": "388715b27bafc125",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tongdiem3",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"diem_to3\", diem); \n  }\nvar timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\nmsg.payload = diem;\n\n\nvar diem_to1 =  flow.get(\"diem_to1\") || 0;\nvar diem_to2 =  flow.get(\"diem_to2\") || 0;\nvar diem_to3 =  flow.get(\"diem_to3\") || 0;\nvar diem_to4 =  flow.get(\"diem_to4\") || 0;\nvar tong = 0;\n  if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to1;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to2;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to3;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to4;\n  }\n\n  flow.set(\"tong_diem\",tong);\n  msg.tongdiem = tong;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "8bb55f774314839c"
+            ]
+        ]
+    },
+    {
+        "id": "3bab9a8009e42661",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tongdiem",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"diem_to4\", diem); \n  }\nvar timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\nmsg.payload = diem;\n\n\nvar diem_to1 =  flow.get(\"diem_to1\") || 0;\nvar diem_to2 =  flow.get(\"diem_to2\") || 0;\nvar diem_to3 =  flow.get(\"diem_to3\") || 0;\nvar diem_to4 =  flow.get(\"diem_to4\") || 0;\nvar tong = 0;\n  if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to1;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to2;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to3;\n  }\n    if (Number.isInteger(diem_to1)){\n      tong = tong+diem_to4;\n  }\n\n  flow.set(\"tong_diem\",tong);\n  msg.tongdiem = tong;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "8bb55f774314839c"
+            ]
+        ]
+    },
+    {
+        "id": "8bb55f774314839c",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "tong_ket",
+        "func": "msg.diemto1 =   flow.get(\"diem_to1\") || 0 ; \nmsg.diemto2 =   flow.get(\"diem_to2\") || 0 ; \nmsg.diemto3 =    flow.get(\"diem_to3\")  || 0 ; \nmsg.diemto4 =   flow.get(\"diem_to4\") || 0 ; \n\nmsg.tong_diemto1 = flow.get(\"tong_diemto1\") || 0; \nmsg.tong_diemto2 = flow.get(\"tong_diemto2\") || 0; \nmsg.tong_diemto3 = flow.get(\"tong_diemto3\") || 0; \nmsg.tong_diemto4 = flow.get(\"tong_diemto4\") || 0; \n\n\nmsg.tongdiem = flow.get(\"tong_diem\") || 0;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 280,
+        "wires": [
+            [
+                "5152bc2c.d40034",
+                "87475251.62a87",
+                "b01d57db.b50668",
+                "5bf98be097a045ac"
+            ]
+        ]
+    },
+    {
+        "id": "3b2ee70cc8a8cf2a",
+        "type": "comment",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "info": "",
+        "x": 1200,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f52b2e03bb3cc085",
+        "type": "ui_text",
+        "z": "78f98ed9.d2e28",
+        "group": "8e979139.1239a",
+        "order": 4,
+        "width": "6",
+        "height": "4",
+        "name": "BAN PHIM 1",
+        "label": "",
+        "format": " <center>Bán trú<br><font size=48>{{msg.diemto1}} / {{msg.tong_diemto1}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5bf98be097a045ac",
+        "type": "function",
+        "z": "78f98ed9.d2e28",
+        "name": "so_lan_nhan_ban_phim1",
+        "func": "var so_lan_nhan_ban_phim1 = flow.get(\"so_lan_nhan_ban_phim1\") || 0; \nif (so_lan_nhan_ban_phim1%2 == 1){\n    return [msg,null];\n}else{\n        return [null,msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 120,
+        "wires": [
+            [
+                "a897b976.f25808"
+            ],
+            [
+                "f52b2e03bb3cc085"
+            ]
+        ]
+    },
+    {
+        "id": "a0f8d4467d27d936",
+        "type": "inject",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "19",
+        "payloadType": "num",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "f813bcb9e2044c9c"
+            ]
+        ]
+    },
+    {
+        "id": "5bef06b6a445dabc",
+        "type": "inject",
+        "z": "78f98ed9.d2e28",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "f813bcb9e2044c9c"
+            ]
+        ]
+    },
+    {
+        "id": "d1369c94e534b575",
+        "type": "mqtt in",
+        "z": "0aabcd8de09bc616",
+        "name": "AIR_KEYBOARD_1",
+        "topic": "AIR_KEYBOARD_1",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "aec8980b4c670be0"
+            ]
+        ]
+    },
+    {
+        "id": "37d6a47d05ae39a0",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "so_lan_nhan_ban_phim1",
+        "func": "var diem = parseInt(msg.payload);\n\nvar so_lan_nhan_ban_phim1 = flow.get(\"so_lan_nhan_ban_phim1\") || 0; \nmsg.pass = false;\nmsg.tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nmsg.tong_diemto1 = flow.get(\"tong_diemto1\") || 0; \n\nif (Number.isInteger(diem)){\n      so_lan_nhan_ban_phim1++;\n      flow.set(\"so_lan_nhan_ban_phim1\",so_lan_nhan_ban_phim1);\n      if ( so_lan_nhan_ban_phim1 % 2 == 1){\n               msg.route = true;\n              if (diem <= msg.tong_siso_6a){\n                flow.set(\"siso_6a\",diem);\n                msg.siso_6a  =  diem;\n                msg.pass = true;\n\n            }\n        }else{\n     \n           \n            msg.route = false;\n                 if (diem <= msg.tong_diemto1){\n                 msg.bantru_6a  =  diem;\n                 msg.pass = true;\n                   flow.set(\"bantru_6a\",diem);\n\n            }\n        } \n        \n        \n}\nmsg.so_lan_nhan_ban_phim1 = so_lan_nhan_ban_phim1;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "dad1eb42a58f9f12"
+            ]
+        ]
+    },
+    {
+        "id": "88404491ae9c6c30",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "9e98e8803f8856f0",
+        "order": 1,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 1",
+        "label": "",
+        "format": " <center>Sĩ Số<br><font size=48>{{msg.siso_6a}} / {{msg.tong_siso_6a}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1010,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "70dd2b8d65aa26a1",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 150,
+        "y": 40,
+        "wires": [
+            [
+                "37d6a47d05ae39a0"
+            ]
+        ]
+    },
+    {
+        "id": "10521fb756b0fcf9",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "19",
+        "payloadType": "num",
+        "x": 130,
+        "y": 20,
+        "wires": [
+            [
+                "37d6a47d05ae39a0"
+            ]
+        ]
+    },
+    {
+        "id": "39529b44dda7559a",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "func": "var timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\n\nmsg.tong_diemto1 = flow.get(\"tong_diemto1\") || 0; \n\n\nmsg.tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nmsg.tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nmsg.tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nmsg.tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\nvar siso_6a =  flow.get(\"siso_6a\") || 0;\nvar siso_7a =  flow.get(\"siso_7a\") || 0;\nvar siso_8a =  flow.get(\"siso_8a\") || 0;\nvar siso_9a =  flow.get(\"siso_9a\") || 0;\n\n\nvar tong_siso = 0;\n  if (Number.isInteger(siso_6a)){\n      tong_siso = tong_siso+siso_6a;\n  }\n    if (Number.isInteger(siso_7a)){\n      tong_siso = tong_siso+siso_7a;\n  }\n    if (Number.isInteger(siso_8a)){\n      tong_siso = tong_siso+siso_8a;\n  }\n    if (Number.isInteger(siso_9a)){\n      tong_siso = tong_siso+siso_9a;\n  }\n\n  flow.set(\"tong_siso\",tong_siso);\n  msg.tongsiso = tong_siso; \n  \n  \nvar bantru_6a =  flow.get(\"bantru_6a\") || 0;\nvar bantru_7a =  flow.get(\"bantru_7a\") || 0;\nvar bantru_8a =  flow.get(\"bantru_8a\") || 0;\nvar bantru_9a =  flow.get(\"bantru_9a\") || 0;\nvar tong_bantru = 0;\n  if (Number.isInteger(bantru_6a)){\n      tong_bantru = tong_bantru+bantru_6a;\n  }\n    if (Number.isInteger(bantru_7a)){\n      tong_bantru = tong_bantru+bantru_7a;\n  }\n    if (Number.isInteger(bantru_8a)){\n      tong_bantru = tong_bantru+bantru_8a;\n  }\n    if (Number.isInteger(bantru_9a)){\n      tong_bantru = tong_bantru+bantru_9a;\n  }\n\n  flow.set(\"tong_bantru\",tong_bantru);\n  msg.tongbantru = tong_bantru;\n \nif (msg.route === true){\n    return [msg,null];\n}else{\n     return [null,msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 100,
+        "wires": [
+            [
+                "01145b83537d60e9",
+                "88404491ae9c6c30"
+            ],
+            [
+                "c73dc73967e96056"
+            ]
+        ]
+    },
+    {
+        "id": "c73dc73967e96056",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "9e98e8803f8856f0",
+        "order": 2,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 1",
+        "label": "",
+        "format": " <center>Bán Trú<br><font size=48>{{msg.bantru_6a}} / {{msg.tong_diemto1}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1030,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "01145b83537d60e9",
+        "type": "debug",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "39517ea06416cf31",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap tong noi tru 6a",
+        "tooltip": "Nhap tong noi tru 6a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 740,
+        "wires": [
+            [
+                "b05f86f42d137553"
+            ]
+        ]
+    },
+    {
+        "id": "1fb165aa2fcee770",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap tong noi tru 7a",
+        "tooltip": "Nhap tong noi tru 7a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 780,
+        "wires": [
+            [
+                "f0c741b8ac466de3"
+            ]
+        ]
+    },
+    {
+        "id": "a35786c245617bd6",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap tong noi tru 8a:",
+        "tooltip": "Nhap tong noi tru 8a:",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 820,
+        "wires": [
+            [
+                "cc3c4b26b8084076"
+            ]
+        ]
+    },
+    {
+        "id": "16911f02c6014509",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap tong noi tru 9a:",
+        "tooltip": "Nhap tong noi tru 9a:",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 260,
+        "y": 860,
+        "wires": [
+            [
+                "6edf516ab7e2bcef"
+            ]
+        ]
+    },
+    {
+        "id": "1af4c1aeed05251a",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tong noi tru 6a hien tai:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b05f86f42d137553",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_diemto1",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_diemto1\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 740,
+        "wires": [
+            [
+                "1af4c1aeed05251a"
+            ]
+        ]
+    },
+    {
+        "id": "f0c741b8ac466de3",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_diemto2",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_diemto2\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 780,
+        "wires": [
+            [
+                "877942a6ed17bb15"
+            ]
+        ]
+    },
+    {
+        "id": "cc3c4b26b8084076",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_diemto3",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_diemto3\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 820,
+        "wires": [
+            [
+                "474bbf51a78c3eca"
+            ]
+        ]
+    },
+    {
+        "id": "6edf516ab7e2bcef",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_diemto4",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_diemto4\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 860,
+        "wires": [
+            [
+                "697b8f872e914042"
+            ]
+        ]
+    },
+    {
+        "id": "877942a6ed17bb15",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tong noi tru 7a hien tai:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "474bbf51a78c3eca",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tong noi tru 8a hien tai:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "697b8f872e914042",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tong noi tru 9a hien tai:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "c0aee6143c45945f",
+        "type": "mqtt in",
+        "z": "0aabcd8de09bc616",
+        "name": "AIR_KEYBOARD_2",
+        "topic": "AIR_KEYBOARD_2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "c6dd581d96d41dd6"
+            ]
+        ]
+    },
+    {
+        "id": "9d4d9059a875acd1",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "so_lan_nhan_ban_phim2",
+        "func": "var diem = parseInt(msg.payload);\nvar so_lan_nhan_ban_phim2 = flow.get(\"so_lan_nhan_ban_phim2\") || 0; \n\nmsg.pass = false;\nmsg.tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nmsg.tong_diemto2 = flow.get(\"tong_diemto2\") || 0; \n\n\nif (Number.isInteger(diem)){\n      so_lan_nhan_ban_phim2++;\n      flow.set(\"so_lan_nhan_ban_phim2\",so_lan_nhan_ban_phim2);\n      if ( so_lan_nhan_ban_phim2 % 2 == 1){\n        msg.route = true;\n              if (diem <= msg.tong_siso_7a){\n                flow.set(\"siso_7a\",diem);\n                msg.siso_7a  =  diem;\n                msg.pass = true;\n\n            }\n        }else{\n     \n           \n            msg.route = false;\n                 if (diem <= msg.tong_diemto2){\n                 msg.bantru_7a  =  diem;\n                 msg.pass = true;\n                   flow.set(\"bantru_7a\",diem);\n\n            }\n        } \n        \n}\nmsg.so_lan_nhan_ban_phim2 = so_lan_nhan_ban_phim2;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "426b9bc219d7c2b7",
+                "b2323f3e319796fa"
+            ]
+        ]
+    },
+    {
+        "id": "adbb83e9bcda34f1",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "func": "var timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\n\nmsg.tong_diemto2 = flow.get(\"tong_diemto2\") || 0; \n\nmsg.tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nmsg.tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nmsg.tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nmsg.tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\n\n\nvar siso_6a =  flow.get(\"siso_6a\") || 0;\nvar siso_7a =  flow.get(\"siso_7a\") || 0;\nvar siso_8a =  flow.get(\"siso_8a\") || 0;\nvar siso_9a =  flow.get(\"siso_9a\") || 0;\nvar tong_siso = 0;\n  if (Number.isInteger(siso_6a)){\n      tong_siso = tong_siso+siso_6a;\n  }\n    if (Number.isInteger(siso_7a)){\n      tong_siso = tong_siso+siso_7a;\n  }\n    if (Number.isInteger(siso_8a)){\n      tong_siso = tong_siso+siso_8a;\n  }\n    if (Number.isInteger(siso_9a)){\n      tong_siso = tong_siso+siso_9a;\n  }\n\n  flow.set(\"tong_siso\",tong_siso);\n  msg.tongsiso = tong_siso; \n  \n  \nvar bantru_6a =  flow.get(\"bantru_6a\") || 0;\nvar bantru_7a =  flow.get(\"bantru_7a\") || 0;\nvar bantru_8a =  flow.get(\"bantru_8a\") || 0;\nvar bantru_9a =  flow.get(\"bantru_9a\") || 0;\nvar tong_bantru = 0;\n  if (Number.isInteger(bantru_6a)){\n      tong_bantru = tong_bantru+bantru_6a;\n  }\n    if (Number.isInteger(bantru_7a)){\n      tong_bantru = tong_bantru+bantru_7a;\n  }\n    if (Number.isInteger(bantru_8a)){\n      tong_bantru = tong_bantru+bantru_8a;\n  }\n    if (Number.isInteger(bantru_9a)){\n      tong_bantru = tong_bantru+bantru_9a;\n  }\n\n  flow.set(\"tong_bantru\",tong_bantru);\n  msg.tongbantru = tong_bantru;\nif (msg.route == true){\n    return [msg,null];\n}else{\n     return [null,msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 300,
+        "wires": [
+            [
+                "24718112df838cfd"
+            ],
+            [
+                "40bcc08b5474aa1f"
+            ]
+        ]
+    },
+    {
+        "id": "24718112df838cfd",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "33db361b4df33800",
+        "order": 1,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 2",
+        "label": "",
+        "format": "  <center>Sĩ Số<br><font size=48>{{msg.siso_7a}} / {{msg.tong_siso_7a}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 970,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "40bcc08b5474aa1f",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "33db361b4df33800",
+        "order": 2,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 2",
+        "label": "",
+        "format": " <center>Bán Trú<br><font size=48>{{msg.bantru_7a}} / {{msg.tong_diemto2}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1010,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a14d0f0ef14cbddb",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "22",
+        "payloadType": "num",
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "9d4d9059a875acd1"
+            ]
+        ]
+    },
+    {
+        "id": "817817b5dd108219",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "11",
+        "payloadType": "num",
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "9d4d9059a875acd1"
+            ]
+        ]
+    },
+    {
+        "id": "ef0c5ad2fc276c0a",
+        "type": "mqtt in",
+        "z": "0aabcd8de09bc616",
+        "name": "AIR_KEYBOARD_3",
+        "topic": "AIR_KEYBOARD_3",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 440,
+        "wires": [
+            [
+                "283886bed428a896"
+            ]
+        ]
+    },
+    {
+        "id": "a83e31533ec87a60",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "so_lan_nhan_ban_phim3",
+        "func": "var diem = parseInt(msg.payload);\nvar so_lan_nhan_ban_phim3 = flow.get(\"so_lan_nhan_ban_phim3\") || 0; \nmsg.pass = false;\n\nmsg.tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\n\nmsg.tong_diemto3 = flow.get(\"tong_diemto3\") || 0; \n\n\nif (Number.isInteger(diem)){\n      so_lan_nhan_ban_phim3++;\n      flow.set(\"so_lan_nhan_ban_phim3\",so_lan_nhan_ban_phim3);\n      if ( so_lan_nhan_ban_phim3 % 2 == 1){\n      \n            msg.route = true;\n              if (diem <= msg.tong_siso_8a){\n                flow.set(\"siso_8a\",diem);\n                msg.siso_8a  =  diem;\n                msg.pass = true;\n\n            }\n        }else{\n     \n           \n            msg.route = false;\n                 if (diem <= msg.tong_diemto3){\n                 msg.bantru_8a  =  diem;\n                 msg.pass = true;\n                   flow.set(\"bantru_8a\",diem);\n\n            }\n        } \n        \n}\nmsg.so_lan_nhan_ban_phim3 = so_lan_nhan_ban_phim3;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 440,
+        "wires": [
+            [
+                "5eb0b4c53ba029a7"
+            ]
+        ]
+    },
+    {
+        "id": "b080f87b3fc2050c",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "func": "var timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\n\nmsg.tong_diemto3 = flow.get(\"tong_diemto3\") || 0; \n\nmsg.tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nmsg.tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nmsg.tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nmsg.tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\n\n\nvar siso_6a =  flow.get(\"siso_6a\") || 0;\nvar siso_7a =  flow.get(\"siso_7a\") || 0;\nvar siso_8a =  flow.get(\"siso_8a\") || 0;\nvar siso_9a =  flow.get(\"siso_9a\") || 0;\nvar tong_siso = 0;\n  if (Number.isInteger(siso_6a)){\n      tong_siso = tong_siso+siso_6a;\n  }\n    if (Number.isInteger(siso_7a)){\n      tong_siso = tong_siso+siso_7a;\n  }\n    if (Number.isInteger(siso_8a)){\n      tong_siso = tong_siso+siso_8a;\n  }\n    if (Number.isInteger(siso_9a)){\n      tong_siso = tong_siso+siso_9a;\n  }\n\n  flow.set(\"tong_siso\",tong_siso);\n  msg.tongsiso = tong_siso; \n  \n  \nvar bantru_6a =  flow.get(\"bantru_6a\") || 0;\nvar bantru_7a =  flow.get(\"bantru_7a\") || 0;\nvar bantru_8a =  flow.get(\"bantru_8a\") || 0;\nvar bantru_9a =  flow.get(\"bantru_9a\") || 0;\nvar tong_bantru = 0;\n  if (Number.isInteger(bantru_6a)){\n      tong_bantru = tong_bantru+bantru_6a;\n  }\n    if (Number.isInteger(bantru_7a)){\n      tong_bantru = tong_bantru+bantru_7a;\n  }\n    if (Number.isInteger(bantru_8a)){\n      tong_bantru = tong_bantru+bantru_8a;\n  }\n    if (Number.isInteger(bantru_9a)){\n      tong_bantru = tong_bantru+bantru_9a;\n  }\n\n  flow.set(\"tong_bantru\",tong_bantru);\n  msg.tongbantru = tong_bantru;\n \nif (msg.route == true){\n    return [msg,null];\n}else{\n     return [null,msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 440,
+        "wires": [
+            [
+                "ae06d1a8be830dd7"
+            ],
+            [
+                "c9a055ea69e9fbcd"
+            ]
+        ]
+    },
+    {
+        "id": "ae06d1a8be830dd7",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "acb1e6e3a85aeecf",
+        "order": 1,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 3",
+        "label": "",
+        "format": "\t \t  <center>Sĩ Số<br><font size=48>{{msg.siso_8a}} / {{msg.tong_siso_8a}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1070,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c9a055ea69e9fbcd",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "acb1e6e3a85aeecf",
+        "order": 2,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 3",
+        "label": "",
+        "format": " <center>Bán Trú<br><font size=48>{{msg.bantru_8a}} / {{msg.tong_diemto3}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 1090,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "df1e38f3b4765e9f",
+        "type": "mqtt in",
+        "z": "0aabcd8de09bc616",
+        "name": "AIR_KEYBOARD_4",
+        "topic": "AIR_KEYBOARD_4",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6bd4aa5ab86a6177",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 560,
+        "wires": [
+            [
+                "321f325ea5eff8a7"
+            ]
+        ]
+    },
+    {
+        "id": "67c4a2857e166a29",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "so_lan_nhan_ban_phim4",
+        "func": "var diem = parseInt(msg.payload);\nvar so_lan_nhan_ban_phim4 = flow.get(\"so_lan_nhan_ban_phim4\") || 0; \nmsg.pass = false;\n\nmsg.tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\nmsg.tong_diemto4 = flow.get(\"tong_diemto4\") || 0; \n\nif (Number.isInteger(diem)){\n      so_lan_nhan_ban_phim4++;\n      flow.set(\"so_lan_nhan_ban_phim4\",so_lan_nhan_ban_phim4);\n      if ( so_lan_nhan_ban_phim4 % 2 == 1){\n   msg.route = true;\n              if (diem <= msg.tong_siso_9a){\n                flow.set(\"siso_9a\",diem);\n                msg.siso_9a  =  diem;\n                msg.pass = true;\n\n            }\n        }else{\n     \n           \n            msg.route = false;\n                 if (diem <= msg.tong_diemto4){\n                 msg.bantru_9a  =  diem;\n                 msg.pass = true;\n                   flow.set(\"bantru_8a\",diem);\n\n        \n\n            }\n        } \n        \n}\nmsg.so_lan_nhan_ban_phim4 = so_lan_nhan_ban_phim4;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 560,
+        "wires": [
+            [
+                "a1aedf6863eb2e53"
+            ]
+        ]
+    },
+    {
+        "id": "a84568abc55d0cf0",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "func": "var timeup = new Date().toLocaleString();  \nmsg.timeup = timeup;\n\nmsg.tong_diemto4 = flow.get(\"tong_diemto4\") || 0; \n\n\nmsg.tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nmsg.tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nmsg.tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nmsg.tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\n\nvar siso_6a =  flow.get(\"siso_6a\") || 0;\nvar siso_7a =  flow.get(\"siso_7a\") || 0;\nvar siso_8a =  flow.get(\"siso_8a\") || 0;\nvar siso_9a =  flow.get(\"siso_9a\") || 0;\nvar tong_siso = 0;\n  if (Number.isInteger(siso_6a)){\n      tong_siso = tong_siso+siso_6a;\n  }\n    if (Number.isInteger(siso_7a)){\n      tong_siso = tong_siso+siso_7a;\n  }\n    if (Number.isInteger(siso_8a)){\n      tong_siso = tong_siso+siso_8a;\n  }\n    if (Number.isInteger(siso_9a)){\n      tong_siso = tong_siso+siso_9a;\n  }\n\n  flow.set(\"tong_siso\",tong_siso);\n  msg.tongsiso = tong_siso; \n  \n  \nvar bantru_6a =  flow.get(\"bantru_6a\") || 0;\nvar bantru_7a =  flow.get(\"bantru_7a\") || 0;\nvar bantru_8a =  flow.get(\"bantru_8a\") || 0;\nvar bantru_9a =  flow.get(\"bantru_9a\") || 0;\nvar tong_bantru = 0;\n  if (Number.isInteger(bantru_6a)){\n      tong_bantru = tong_bantru+bantru_6a;\n  }\n    if (Number.isInteger(bantru_7a)){\n      tong_bantru = tong_bantru+bantru_7a;\n  }\n    if (Number.isInteger(bantru_8a)){\n      tong_bantru = tong_bantru+bantru_8a;\n  }\n    if (Number.isInteger(bantru_9a)){\n      tong_bantru = tong_bantru+bantru_9a;\n  }\n\n  flow.set(\"tong_bantru\",tong_bantru);\n  msg.tongbantru = tong_bantru;\n \nif (msg.route == true){\n    return [msg,null];\n}else{\n     return [null,msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "f43ad3fdb1933640"
+            ],
+            [
+                "d536668476033050"
+            ]
+        ]
+    },
+    {
+        "id": "f43ad3fdb1933640",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "d00512902b8013dc",
+        "order": 1,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 4",
+        "label": "",
+        "format": "    <center>Sĩ Số<br><font size=48>{{msg.siso_9a}} / {{msg.tong_siso_9a}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 890,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d536668476033050",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "d00512902b8013dc",
+        "order": 2,
+        "width": 6,
+        "height": "3",
+        "name": "BAN PHIM 4",
+        "label": "",
+        "format": " <center>Bán Trú<br><font size=48>{{msg.bantru_9a}} / {{msg.tong_diemto4}}</font><br><font size=\"-2\"><i class=\"fa fa-keyboard-o fa-2x\"></i>  {{msg.timeup}}</font></center>",
+        "layout": "col-center",
+        "className": "",
+        "x": 890,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "ab2b8ba2c2cc4975",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "a83e31533ec87a60"
+            ]
+        ]
+    },
+    {
+        "id": "514562fe69842c8d",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12",
+        "payloadType": "num",
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "a83e31533ec87a60"
+            ]
+        ]
+    },
+    {
+        "id": "c887f7f1c295cd6d",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "16",
+        "payloadType": "num",
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "67c4a2857e166a29"
+            ]
+        ]
+    },
+    {
+        "id": "b2534b8bd2102c35",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "17",
+        "payloadType": "num",
+        "x": 510,
+        "y": 500,
+        "wires": [
+            [
+                "67c4a2857e166a29"
+            ]
+        ]
+    },
+    {
+        "id": "9abd406e63c6bd88",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "num",
+        "x": 270,
+        "y": 20,
+        "wires": [
+            [
+                "aec8980b4c670be0"
+            ]
+        ]
+    },
+    {
+        "id": "239ae462f8ce09cc",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "52",
+        "payloadType": "num",
+        "x": 450,
+        "y": 40,
+        "wires": [
+            [
+                "37d6a47d05ae39a0"
+            ]
+        ]
+    },
+    {
+        "id": "73088037f97ff3b4",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "bc39bd6ccd8a2dd6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "TONG SISO",
+        "label": "",
+        "format": "<font size = 48>{{msg.payload}} ",
+        "layout": "col-center",
+        "className": "",
+        "x": 830,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "63949455aa9074eb",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso",
+        "func": "var tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nvar tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nvar tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nvar tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\nvar tong_siso = flow.get(\"tong_siso\") || 0;\nvar tong_siso_tatca = tong_siso_6a + tong_siso_7a + tong_siso_8a+tong_siso_9a;\nmsg.payload = tong_siso +\" / \"+tong_siso_tatca;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1080,
+        "wires": [
+            [
+                "73088037f97ff3b4"
+            ]
+        ]
+    },
+    {
+        "id": "e936fe4f629a1a52",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 1080,
+        "wires": [
+            [
+                "63949455aa9074eb",
+                "e56f62d5b6daa4c7"
+            ]
+        ]
+    },
+    {
+        "id": "e56f62d5b6daa4c7",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_bantru",
+        "func": "msg.payload = flow.get(\"tong_bantru\") || 0;\nvar tong_bantru_6a =  flow.get(\"tong_diemto1\") || 0;\nvar tong_bantru_7a =  flow.get(\"tong_diemto2\") || 0;\nvar tong_bantru_8a =  flow.get(\"tong_diemto3\") || 0;\nvar tong_bantru_9a =  flow.get(\"tong_diemto4\") || 0;\nvar tong_bantru = flow.get(\"tong_bantru\") || 0;\nvar tong_bantru_tatca = tong_bantru_6a + tong_bantru_7a + tong_bantru_8a+tong_bantru_9a;\nmsg.payload = tong_bantru +\" / \"+tong_bantru_tatca;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 1120,
+        "wires": [
+            [
+                "926aecd84aef37b9"
+            ]
+        ]
+    },
+    {
+        "id": "926aecd84aef37b9",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "266a4956a25e56d2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "TONG Bán Trú",
+        "label": "",
+        "format": "<font size = 48>{{msg.payload}} ",
+        "layout": "col-center",
+        "className": "",
+        "x": 820,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "d3542815eb279215",
+        "type": "ui_button",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "group": "ba3ab2ac31d1211f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Xoa",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0/0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 940,
+        "wires": [
+            [
+                "b81686f8b744a025"
+            ]
+        ]
+    },
+    {
+        "id": "b81686f8b744a025",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "reset_diem",
+        "func": "flow.set(\"siso_6a\", 0);\nflow.set(\"siso_7a\", 0);\nflow.set(\"siso_8a\", 0);   \nflow.set(\"siso_9a\", 0);   \n\n\nflow.set(\"bantru_6a\", 0);\nflow.set(\"bantru_7a\", 0);\nflow.set(\"bantru_8a\", 0);   \nflow.set(\"bantru_9a\", 0);   \n\n\nmsg.siso_6a = 0;\nmsg.siso_7a = 0;\n\nmsg.siso_8a = 0;\nmsg.siso_9a = 0;\n\nmsg.tong_diemto1 = flow.get(\"tong_diemto1\") || 0; \nmsg.tong_diemto2 = flow.get(\"tong_diemto2\") || 0; \nmsg.tong_diemto3 = flow.get(\"tong_diemto3\") || 0; \nmsg.tong_diemto4 = flow.get(\"tong_diemto4\") || 0; \nmsg.tong_siso_6a = flow.get(\"tong_siso6a\") || 0; \nmsg.tong_siso_7a = flow.get(\"tong_siso7a\") || 0; \nmsg.tong_siso_8a = flow.get(\"tong_siso8a\") || 0; \nmsg.tong_siso_9a = flow.get(\"tong_siso9a\") || 0; \n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 920,
+        "wires": [
+            [
+                "b4422c263bb4932a"
+            ]
+        ]
+    },
+    {
+        "id": "b4422c263bb4932a",
+        "type": "link out",
+        "z": "0aabcd8de09bc616",
+        "name": "rs",
+        "mode": "link",
+        "links": [
+            "60d54b2bb5d6c0d8"
+        ],
+        "x": 595,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6e083b331541f9f8",
+        "type": "ui_button",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "group": "ba3ab2ac31d1211f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reset Tổng",
+        "tooltip": "Xóa tổng điểm",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 980,
+        "wires": [
+            [
+                "b77b8e78b79f7c54",
+                "44e1e4b290026bf6"
+            ]
+        ]
+    },
+    {
+        "id": "b77b8e78b79f7c54",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_bantru = 0",
+        "func": "\n\nflow.set(\"tong_siso\", 0);\nflow.set(\"tong_bantru\", 0);\nvar tong_bantru_6a =  flow.get(\"tong_diemto1\") || 0;\nvar tong_bantru_7a =  flow.get(\"tong_diemto2\") || 0;\nvar tong_bantru_8a =  flow.get(\"tong_diemto3\") || 0;\nvar tong_bantru_9a =  flow.get(\"tong_diemto4\") || 0;\nvar tong_bantru =  0;\nvar tong_bantru_tatca = tong_bantru_6a + tong_bantru_7a + tong_bantru_8a+tong_bantru_9a;\nmsg.payload = tong_bantru +\" / \"+tong_bantru_tatca;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 980,
+        "wires": [
+            [
+                "926aecd84aef37b9"
+            ]
+        ]
+    },
+    {
+        "id": "60d54b2bb5d6c0d8",
+        "type": "link in",
+        "z": "0aabcd8de09bc616",
+        "name": "in_rs",
+        "links": [
+            "b4422c263bb4932a"
+        ],
+        "x": 655,
+        "y": 200,
+        "wires": [
+            [
+                "88404491ae9c6c30",
+                "c73dc73967e96056",
+                "24718112df838cfd",
+                "40bcc08b5474aa1f",
+                "ae06d1a8be830dd7",
+                "c9a055ea69e9fbcd",
+                "f43ad3fdb1933640",
+                "d536668476033050"
+            ]
+        ]
+    },
+    {
+        "id": "426b9bc219d7c2b7",
+        "type": "debug",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "05cb513213c491bf",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "6ed381ea5e69ca28",
+        "order": 1,
+        "width": 24,
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "<font color=\"white\" size=48>TRƯỜNG PTDTBT THCS TẢ THÀNG</font>",
+        "layout": "row-center",
+        "className": "",
+        "x": 630,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d66e0987141f631f",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "so_lan_nhan_ban_phim1",
+        "func": "flow.set(\"so_lan_nhan_ban_phim1\", 0);\nflow.set(\"so_lan_nhan_ban_phim2\", 0);\nflow.set(\"so_lan_nhan_ban_phim3\", 0);\nflow.set(\"so_lan_nhan_ban_phim4\", 0);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92c45dddd23d1e5c",
+        "type": "ui_button",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "group": "8e11103e59ba7f57",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Click vao de reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 1180,
+        "wires": [
+            [
+                "d66e0987141f631f"
+            ]
+        ]
+    },
+    {
+        "id": "8dec5bc37361d98a",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap si so 6a",
+        "tooltip": "Nhap si so 6a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1340,
+        "wires": [
+            [
+                "999def9fed213f2c"
+            ]
+        ]
+    },
+    {
+        "id": "d1832f8a1a6b9e63",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap si so 7a",
+        "tooltip": "Nhap si so 7a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1380,
+        "wires": [
+            [
+                "2abca35002492e60"
+            ]
+        ]
+    },
+    {
+        "id": "18f6c19fe39c1d68",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap si so 8a",
+        "tooltip": "Nhap si so 8a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1420,
+        "wires": [
+            [
+                "86446fcb4980b2f1"
+            ]
+        ]
+    },
+    {
+        "id": "3731593c8aee8781",
+        "type": "ui_text_input",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "label": "Nhap si so 9a",
+        "tooltip": "Nhap si so 9a",
+        "group": "eb861a20c6606199",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 1460,
+        "wires": [
+            [
+                "98d82b61fa6f8544"
+            ]
+        ]
+    },
+    {
+        "id": "dec951cc953c9d54",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Si so 6a",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 600,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "999def9fed213f2c",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso6a",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_siso6a\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1340,
+        "wires": [
+            [
+                "dec951cc953c9d54"
+            ]
+        ]
+    },
+    {
+        "id": "2abca35002492e60",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso7a",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_siso7a\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1380,
+        "wires": [
+            [
+                "26f60c77f16bd53f"
+            ]
+        ]
+    },
+    {
+        "id": "86446fcb4980b2f1",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso8a",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_siso8a\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1420,
+        "wires": [
+            [
+                "60575171740162bb"
+            ]
+        ]
+    },
+    {
+        "id": "98d82b61fa6f8544",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso9a",
+        "func": "var diem = parseInt(msg.payload);\n  if (Number.isInteger(diem)){\n      flow.set(\"tong_siso9a\", diem); \n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 1460,
+        "wires": [
+            [
+                "e4ae68c184d527e0"
+            ]
+        ]
+    },
+    {
+        "id": "26f60c77f16bd53f",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Si so 7a",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 600,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "60575171740162bb",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Si so 8a",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 600,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e4ae68c184d527e0",
+        "type": "ui_text",
+        "z": "0aabcd8de09bc616",
+        "group": "eb861a20c6606199",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Si so 9a",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 600,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "97607e310836dcf0",
+        "type": "ui_toast",
+        "z": "0aabcd8de09bc616",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 890,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7024f54799c3ab7c",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "DK",
+        "func": "if (msg.siso_6a<=msg.tong_siso_6a){\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 40,
+        "wires": [
+            [
+                "88404491ae9c6c30"
+            ]
+        ]
+    },
+    {
+        "id": "0799a6652cca55e0",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "DK 2",
+        "func": "if ( msg.bantru_6a <= msg.tong_diemto1){\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 20,
+        "wires": [
+            [
+                "c73dc73967e96056"
+            ]
+        ]
+    },
+    {
+        "id": "dad1eb42a58f9f12",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "property": "pass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [
+                "39529b44dda7559a"
+            ]
+        ]
+    },
+    {
+        "id": "b2323f3e319796fa",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "property": "pass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 300,
+        "wires": [
+            [
+                "adbb83e9bcda34f1"
+            ]
+        ]
+    },
+    {
+        "id": "5eb0b4c53ba029a7",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "property": "pass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "b080f87b3fc2050c"
+            ]
+        ]
+    },
+    {
+        "id": "a1aedf6863eb2e53",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "property": "pass",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 560,
+        "wires": [
+            [
+                "a84568abc55d0cf0"
+            ]
+        ]
+    },
+    {
+        "id": "e872f6c155391676",
+        "type": "ui_switch",
+        "z": "0aabcd8de09bc616",
+        "name": "khoa_6a",
+        "label": "Khóa nhập",
+        "tooltip": "",
+        "group": "9e98e8803f8856f0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1540,
+        "wires": [
+            [
+                "43edcce5b1e20b61"
+            ]
+        ]
+    },
+    {
+        "id": "44e1e4b290026bf6",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "tong_siso = 0",
+        "func": "\n\nflow.set(\"tong_siso\", 0);\n\nvar tong_siso_6a =  flow.get(\"tong_siso6a\") || 0;\nvar tong_siso_7a =  flow.get(\"tong_siso7a\") || 0;\nvar tong_siso_8a =  flow.get(\"tong_siso8a\") || 0;\nvar tong_siso_9a =  flow.get(\"tong_siso9a\") || 0;\nvar tong_siso = 0;\nvar tong_siso_tatca = tong_siso_6a + tong_siso_7a + tong_siso_8a+tong_siso_9a;\nmsg.payload = tong_siso +\" / \"+tong_siso_tatca;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1020,
+        "wires": [
+            [
+                "73088037f97ff3b4"
+            ]
+        ]
+    },
+    {
+        "id": "2e4a4342538c06d4",
+        "type": "ui_switch",
+        "z": "0aabcd8de09bc616",
+        "name": "khoa_7a",
+        "label": "Khóa nhập",
+        "tooltip": "",
+        "group": "33db361b4df33800",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1600,
+        "wires": [
+            [
+                "b3b539b887d40c8b"
+            ]
+        ]
+    },
+    {
+        "id": "3541804e87e4d96b",
+        "type": "ui_switch",
+        "z": "0aabcd8de09bc616",
+        "name": "khoa_8a",
+        "label": "Khóa nhập",
+        "tooltip": "",
+        "group": "acb1e6e3a85aeecf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1660,
+        "wires": [
+            [
+                "6e68eb62a3b90fa9"
+            ]
+        ]
+    },
+    {
+        "id": "da010823907db3ea",
+        "type": "ui_switch",
+        "z": "0aabcd8de09bc616",
+        "name": "khoa_9a",
+        "label": "Khóa nhập",
+        "tooltip": "",
+        "group": "d00512902b8013dc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 220,
+        "y": 1720,
+        "wires": [
+            [
+                "477875506ba174dd"
+            ]
+        ]
+    },
+    {
+        "id": "43edcce5b1e20b61",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "payload",
+        "func": "flow.set(\"lock_6a\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1540,
+        "wires": [
+            [
+                "7391aa8234688637"
+            ]
+        ]
+    },
+    {
+        "id": "b3b539b887d40c8b",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "payload",
+        "func": "flow.set(\"lock_7a\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e68eb62a3b90fa9",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "payload",
+        "func": "flow.set(\"lock_8a\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "477875506ba174dd",
+        "type": "function",
+        "z": "0aabcd8de09bc616",
+        "name": "payload",
+        "func": "flow.set(\"lock_9a\", msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7391aa8234688637",
+        "type": "debug",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "aec8980b4c670be0",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "lock",
+        "property": "lock_6a",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 100,
+        "wires": [
+            [
+                "37d6a47d05ae39a0"
+            ]
+        ]
+    },
+    {
+        "id": "c6dd581d96d41dd6",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "lock",
+        "property": "lock_7a",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "9d4d9059a875acd1"
+            ]
+        ]
+    },
+    {
+        "id": "283886bed428a896",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "lock",
+        "property": "lock_8a",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 440,
+        "wires": [
+            [
+                "a83e31533ec87a60"
+            ]
+        ]
+    },
+    {
+        "id": "321f325ea5eff8a7",
+        "type": "switch",
+        "z": "0aabcd8de09bc616",
+        "name": "lock",
+        "property": "lock_9a",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "67c4a2857e166a29"
+            ]
+        ]
+    },
+    {
+        "id": "68bebf878e0565f7",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "22",
+        "payloadType": "num",
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "aec8980b4c670be0"
+            ]
+        ]
+    },
+    {
+        "id": "0580232284dc3e31",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "33",
+        "payloadType": "num",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "aec8980b4c670be0"
+            ]
+        ]
+    },
+    {
+        "id": "08b3cc90847a7882",
+        "type": "inject",
+        "z": "0aabcd8de09bc616",
+        "name": "begin",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 70,
+        "y": 1620,
+        "wires": [
+            [
+                "e872f6c155391676",
+                "2e4a4342538c06d4",
+                "3541804e87e4d96b",
+                "da010823907db3ea"
+            ]
+        ]
+    }
+]

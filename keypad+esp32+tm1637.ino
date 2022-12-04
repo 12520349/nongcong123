@@ -8,8 +8,8 @@ String myip;
 WiFiClient net;
 MQTTClient client(256);
 
-String mqtt_topic = "AIR_KEYBOARD_1";
-char airname[]    = "AIR_KEYBOARD_1";
+String mqtt_topic = "AIR_KEYBOARD_2";
+char airname[]    = "AIR_KEYBOARD_2";
 unsigned long lastMillis = 0;
 
 
@@ -130,7 +130,7 @@ void setup() {
   // Print custom text box value to serial monitor
   Serial.print("Custom text box entry: ");
   Serial.println(custom_text_box.getValue());
-  client.begin("18.138.40.49", net);
+  client.begin("test.mosquitto.org", net);
   client.onMessage(messageReceived);
   display.setSegments(oooo);
   connect();

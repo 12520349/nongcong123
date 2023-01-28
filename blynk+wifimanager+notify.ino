@@ -27,12 +27,21 @@ char blynk_token[34] = "DyGDVaSKYcwqPCN29U7N09YU66CPWAxM";
 #include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
 #include <ArduinoJson.h>          //https://github.com/bblanchon/ArduinoJson
 
+
+ #include <LiquidCrystal_I2C.h>
+
+int totalColumns = 16;
+int totalRows = 2;
+
+LiquidCrystal_I2C lcd(0x27, totalColumns, totalRows);
+
+
+
 #include "DHTesp.h"
 
 #define DHTpin 15    //D15 of ESP32 DevKit
 
 DHTesp dht;
-
 const int analogPin = 36;  // Analog input pin 0 (GPIO 36)
 
 //flag for saving data
@@ -52,9 +61,13 @@ char ssid[] = "OKBABE";
 char pass[] = "12345678A";
 
 BlynkTimer timer;
-int led = 4;
-
+//int led = 4;
+int congtac1 = 4;
+int congtac2 = 16;
+int congtac3 = 17;
+int congtac4 = 5;
 // This function is called every time the Virtual Pin 0 state changes
+/*
 BLYNK_WRITE(V0)
 {
   // Set incoming value from pin V0 to a variable
@@ -63,12 +76,61 @@ BLYNK_WRITE(V0)
   // Update state
   Blynk.virtualWrite(V1, value);
 }
+*/
+BLYNK_WRITE(V1)
+{
+  int trangthai = param.asInt();
+  digitalWrite(congtac1, trangthai);
+  lcd.clear(); 
+lcd.setCursor(0, 0);
+  if (trangthai == 1){
+lcd.print("Relay 1 => ON");
+}else{
+  lcd.print("Relay 1 => OFF");
+
+  }
+
+}
 BLYNK_WRITE(V2)
 {
-  int pinLED = param.asInt();
-  digitalWrite(led, pinLED);
+  int trangthai = param.asInt();
+  digitalWrite(congtac2, trangthai);
+lcd.clear(); 
+lcd.setCursor(0, 0);
+if (trangthai == 1){
+lcd.print("Relay 0 => ON");
+}else{
+  lcd.print("Relay 0 => OFF");
+
+  }
+}
+BLYNK_WRITE(V3)
+{
+  int trangthai = param.asInt();
+  digitalWrite(congtac3, trangthai);
+lcd.clear(); 
+lcd.setCursor(0, 0);
+if (trangthai == 1){
+lcd.print("Relay 3 => ON");
+}else{
+  lcd.print("Relay 3 => OFF");
+
+  }
 }
 
+BLYNK_WRITE(V4)
+{
+  int trangthai = param.asInt();
+  digitalWrite(congtac4, trangthai);
+lcd.clear(); 
+lcd.setCursor(0, 0);
+if (trangthai == 1){
+lcd.print("Relay 2 => ON");
+}else{
+  lcd.print("Relay 2 => OFF");
+
+  }
+}
 // This function is called every time the device is connected to the Blynk.Cloud
 BLYNK_CONNECTED()
 {
@@ -87,29 +149,66 @@ void myTimerEvent()
 }
 void sendSensor()
 {
+   
+   //delay(dht.getMinimumSamplingPeriod());
+
   float h = dht.getHumidity();
   float t = dht.getTemperature();
+
+
+  /*
+  float h = dht.readHumidity();
+// Read temperature as Celsius (the default)
+float t = dht.readTemperature();
+*/
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor!");
     return;
+    }  else {
+    lcd.clear(); 
+    lcd.setCursor(10,0);
+    lcd.print(round(t));
+    lcd.print(" ");
+    lcd.write(1);
+    lcd.print("C");
+
+    lcd.setCursor(10,1);
+    lcd.print(round(h));
+    lcd.print(" %"); 
+    delay(200);   
   }
+
+  Serial.print(dht.getStatusString());
+  Serial.print("\t");
+  Serial.print(h, 1);
+  Serial.print("\t\t");
+  Serial.print(t, 1);
+  Serial.print("\t\t");
+
+  
   // You can send any value at any time.
   // Please don't send more that 10 values per second.
   Blynk.virtualWrite(V5, h);
   Blynk.virtualWrite(V6, t);
+
+
 }
 void setup()
 {
-    pinMode(led, OUTPUT);
-    
+    pinMode(congtac1, OUTPUT);
+        pinMode(congtac2, OUTPUT);
+   pinMode(congtac3, OUTPUT);
+        pinMode(congtac4, OUTPUT);
+    lcd.init(); 
+lcd.backlight(); // use to turn on and turn off LCD back light
   // Debug console
   Serial.begin(115200);
    dht.setup(DHTpin, DHTesp::DHT22); //for DHT22 Connect DHT sensor to GPIO 17
 
 
-  // Setup a function to be called every second
-  //timer.setInterval(1000L, sendSensor);
-  timer.setInterval(1000L, AnalogPinRead);  // Run sensor scan 4 times a second
+//   dht.setup(DHTpin, DHTesp::DHT22); //for DHT22 Connect DHT sensor to GPIO 17
+
+
 
   //clean FS, for testing
   //SPIFFS.format();
@@ -193,6 +292,9 @@ void setup()
   //and goes into a blocking loop awaiting configuration
   if (!wifiManager.autoConnect("AutoConnectAP", "password")) {
     Serial.println("failed to connect and hit timeout");
+        lcd.clear(); 
+lcd.setCursor(0, 0);
+lcd.print("failed to connect");
     delay(3000);
     //reset and try again, or maybe put it to deep sleep
     //ESP.reset();
@@ -227,7 +329,10 @@ void setup()
     configFile.close();
     //end save
   }
-
+Serial.print("SSID: ");
+Serial.println(WiFi.SSID());
+Serial.print("psk: ");
+Serial.println(WiFi.psk());
  while (WiFi.status() != WL_CONNECTED) {
        int mytimeout = 5;
        delay(500);
@@ -244,7 +349,10 @@ void setup()
    Serial.println("connected to WiFi!! yay :)");
    Serial.println("IP address: ");
    Serial.println(WiFi.localIP()); 
- 
+ lcd.clear(); 
+lcd.setCursor(0, 0);
+lcd.print(WiFi.localIP());
+delay(1000);
  
   Blynk.config(blynk_token);
   bool result = Blynk.connect();
@@ -266,6 +374,11 @@ void setup()
  else if (WiFi.status() != WL_CONNECTED){
   Serial.println("WiFi Connection Fail");
  } 
+   // Setup a function to be called every second
+
+timer.setInterval(5*60*1000, connectionstatus);  // check every 5 minutes
+timer.setInterval(1000L, sendSensor);
+timer.setInterval(1000L, AnalogPinRead);  // Run sensor scan 4 times a second
 
  
   //Blynk.begin(auth, ssid, pass);
@@ -292,7 +405,51 @@ void loop()
 {
   Blynk.run();
   timer.run();
+  /*
+    delay(dht.getMinimumSamplingPeriod());
+
+  float humidity = dht.getHumidity();
+  float temperature = dht.getTemperature();
+
+  Serial.print(dht.getStatusString());
+  Serial.print("\t");
+  Serial.print(humidity, 1);
+  Serial.print("\t\t");
+  Serial.print(temperature, 1);
+  Serial.print("\t\t");
+  Serial.print(dht.toFahrenheit(temperature), 1);
+  Serial.print("\t\t");
+  Serial.print(dht.computeHeatIndex(temperature, humidity, false), 1);
+  Serial.print("\t\t");
+  Serial.println(dht.computeHeatIndex(dht.toFahrenheit(temperature), humidity, true), 1);
+*/
   // You can inject your own code or combine it with other sketches.
   // Check other examples on how to communicate with Blynk. Remember
   // to avoid delay() function!
+}
+
+void connectionstatus() {
+  
+  if ((WiFi.status() != WL_CONNECTED) ) {
+    Serial.println("Reconnecting to WiFi...");
+    WiFi.disconnect();
+    WiFi.begin(ssid, pass);
+    while (WiFi.status() != WL_CONNECTED) {
+      delay(100);
+      Serial.print(".");
+    }
+    Serial.println();
+    Serial.println(WiFi.localIP());
+    //Alternatively, you can restart your board
+    //ESP.restart();
+  } else {
+    Serial.println("wifi OK");
+  }
+
+  if (!Blynk.connected() ) {
+    Serial.println("Lost Blynk server connection");
+    Blynk.connect();
+  } else {
+    Serial.println("Blynk OK");
+  }
 }

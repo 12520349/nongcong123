@@ -1,21 +1,23 @@
-#include <Arduino.h>
-#define UART_RX_PIN 2 // GPIO2
-#define UART_TX_PIN 4 // GPIO4
-void setup() {
-  // Serial connects to the computer
-  Serial.begin(115200);
-  // Serial2 is the hardware UART port that connects to external circuitry
-  Serial2.begin(115200, SERIAL_8N1,
-                UART_RX_PIN,
-                UART_TX_PIN);
-}
-void loop() {
-  // Copy byte incoming via PC serial
-  while (Serial.available() > 0) {
-    Serial2.write(Serial.read());
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(7, 8); // RX, TX
+
+void setup() 
+{ // Open serial communications and wait for port to open:  
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only 
   }
-  // Copy bytes incoming via UART serial
-  while (Serial2.available() > 0) {
-    Serial.write(Serial2.read());
+
+  Serial.println("Goodnight moon!"); // set the data rate for the SoftwareSerial port  mySerial.begin(4800);  
+  mySerial.println("AT\n");
+}
+void loop() 
+{ // run over and over  
+  if (mySerial.available()) {
+    Serial.write(mySerial.read());
+  }
+  if (Serial.available()) {
+    mySerial.write(Serial.read());
   }
 }

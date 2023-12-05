@@ -1,0 +1,3171 @@
+[
+    {
+        "id": "3adad49a4670783e",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5d59caec6bafac00",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1fe6c5f12e206b1b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "230f8a8485793254",
+        "type": "ui_group",
+        "name": "BAN PHIM",
+        "tab": "5d59caec6bafac00",
+        "order": 1,
+        "disp": false,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "450fc273e0f169da",
+        "type": "ui_spacer",
+        "z": "3adad49a4670783e",
+        "name": "spacer",
+        "group": "230f8a8485793254",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8b5cde76.edd58",
+        "type": "ui_group",
+        "name": "default",
+        "tab": "",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "64b722a70e9e6955",
+        "type": "rpi-keyboard",
+        "z": "3adad49a4670783e",
+        "name": "",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "06e7e430d9715d32",
+                "8de21d0ff40f45d9",
+                "ef50dc60fa0a4f79"
+            ]
+        ]
+    },
+    {
+        "id": "7f9649753b650996",
+        "type": "exec",
+        "z": "3adad49a4670783e",
+        "command": "sudo killall aplay ; sudo aplay",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1280,
+        "y": 200,
+        "wires": [
+            [
+                "cfaf23e4d969a00b"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cfaf23e4d969a00b",
+        "type": "debug",
+        "z": "3adad49a4670783e",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8de21d0ff40f45d9",
+        "type": "switch",
+        "z": "3adad49a4670783e",
+        "name": "so sanh phim",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "30",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "31",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "88",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "99",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "70",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "119",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "110",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "102",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "104",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "111",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "107",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "109",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "69",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "98",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "71",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "72",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "75",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "76",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "55",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "74",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "73",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "78",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "77",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "81",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "83",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "59",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "60",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "61",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "62",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "63",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "64",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "65",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "66",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "67",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "68",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "87",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "41",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "43",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "16",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "17",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "18",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "19",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "21",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "22",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "23",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "24",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "25",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "26",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "27",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "58",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "32",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "33",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "34",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "35",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "36",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "37",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "38",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "39",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "40",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "42",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "44",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "45",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "46",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "47",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "48",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "49",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "51",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "52",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "53",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "54",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "29",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "125",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "56",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "126",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "127",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "97",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "105",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "108",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "106",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "103",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "82",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "79",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "80",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 101,
+        "x": 530,
+        "y": 760,
+        "wires": [
+            [
+                "7906d9ffa74db954"
+            ],
+            [
+                "6a0f14cf7a4ebe20"
+            ],
+            [
+                "f41e321e0ba95434"
+            ],
+            [
+                "5452a0ad6b7a74cb"
+            ],
+            [
+                "4b167b5af7ff6c12"
+            ],
+            [
+                "72a93934df14327e"
+            ],
+            [
+                "868b370cc22b840a"
+            ],
+            [
+                "c5553cf2167ebf42"
+            ],
+            [
+                "636a2fd92fbb8876"
+            ],
+            [
+                "3346150bd022c9bf"
+            ],
+            [
+                "d422d4b763383da4"
+            ],
+            [
+                "c368e887130df448"
+            ],
+            [
+                "6e6b1c5efa4f53b9"
+            ],
+            [
+                "ca3e359b5a0aa86e"
+            ],
+            [
+                "f9accb383ab5d423"
+            ],
+            [
+                "578fedbf42adcfa7"
+            ],
+            [
+                "39dece216ccfc5cc"
+            ],
+            [
+                "d7a254acf3387d9e"
+            ],
+            [
+                "02e756d244d54ca7"
+            ],
+            [
+                "f476945c68441b53"
+            ],
+            [
+                "e77c0f6d7a954d22"
+            ],
+            [
+                "827e26bb15a5b1f6"
+            ],
+            [
+                "8f7801126446c4ed"
+            ],
+            [
+                "2768d668cd590177"
+            ],
+            [
+                "22589781e7e99763"
+            ],
+            [
+                "f20b1ec55dd85441"
+            ],
+            [
+                "f6fd54c3b3591e3a"
+            ],
+            [
+                "3da41fd57214409e"
+            ],
+            [
+                "a626a955f20d85ce"
+            ],
+            [
+                "d57c6d73f1049c19"
+            ],
+            [
+                "2ffaa7e5b97a7ad3"
+            ],
+            [
+                "61634ba5cc1c8467"
+            ],
+            [
+                "1dddb5399a206327"
+            ],
+            [
+                "deec9dc7495b2e01"
+            ],
+            [
+                "847b6065879132b7"
+            ],
+            [
+                "8b589431d97d8580"
+            ],
+            [
+                "fcca3789fe078c5f"
+            ],
+            [
+                "2325a9794af7d326"
+            ],
+            [
+                "e8f2499412355174"
+            ],
+            [
+                "9b123f5c527d2bd7"
+            ],
+            [
+                "c27b7edbb098c652"
+            ],
+            [
+                "dd7ba79055ae5a7e"
+            ],
+            [
+                "f8e22d1935fef1f3"
+            ],
+            [
+                "7b58c18de78bb112"
+            ],
+            [
+                "753a12fc5a67e811"
+            ],
+            [
+                "e7f221fad4b760c6"
+            ],
+            [
+                "8391ac8c9c04a14f"
+            ],
+            [
+                "4cb2c8de2e509a5d"
+            ],
+            [
+                "e30a87902572ff72"
+            ],
+            [
+                "01f3204463a58b43"
+            ],
+            [
+                "3579ddac2bba44e5"
+            ],
+            [
+                "906f19c2e3661f0b"
+            ],
+            [
+                "e6cd7e2bdd194633"
+            ],
+            [
+                "589550fb8005ab5e"
+            ],
+            [
+                "52e61eed8b1a59de"
+            ],
+            [
+                "60b01a53052b10cf"
+            ],
+            [
+                "11eaaf9e26d9125a"
+            ],
+            [
+                "ac4c8aaf2c620ad0"
+            ],
+            [
+                "ea387d152ad0a632"
+            ],
+            [
+                "d33542ad994e5ae1"
+            ],
+            [
+                "43e64a38182fd00f"
+            ],
+            [
+                "534fb0d44894b110"
+            ],
+            [
+                "8a75ddae64709455"
+            ],
+            [
+                "dcca75a3e751e6ab"
+            ],
+            [
+                "e28560c1f9dcf6fa"
+            ],
+            [
+                "3e1a4c564f447dfe"
+            ],
+            [
+                "77a2df5ca4cb5dd7"
+            ],
+            [
+                "d032371fdb45a078"
+            ],
+            [
+                "96e01dd5ac19e798"
+            ],
+            [
+                "34aecb727aa3cbdb"
+            ],
+            [
+                "ca6a51cbea78c188"
+            ],
+            [
+                "10d41e827f13b7c0"
+            ],
+            [
+                "e6c71cefcf1d4c80"
+            ],
+            [
+                "5b03a4c2fddac5ec"
+            ],
+            [
+                "d95af7bed08d3fac"
+            ],
+            [
+                "efb6a146897fae2d"
+            ],
+            [
+                "6ac927de1d92db95"
+            ],
+            [
+                "b4701d3cdfb6d82f"
+            ],
+            [
+                "29bc6c7d27587f08"
+            ],
+            [
+                "3dc28bbc06aa461e"
+            ],
+            [
+                "615cf48b7c5acea6"
+            ],
+            [
+                "110267da276f917c"
+            ],
+            [
+                "ef7d4c9261020d89"
+            ],
+            [
+                "3f6793a828e5b7d4"
+            ],
+            [
+                "d9efd4a6fa26ebfd"
+            ],
+            [
+                "63a017734a1a448d"
+            ],
+            [
+                "9986b08d9cd0e1b6"
+            ],
+            [
+                "0b76833efae27ec6"
+            ],
+            [
+                "c558653dee43907c"
+            ],
+            [
+                "18ee3e553f52c566"
+            ],
+            [
+                "c7906f6d7a2d0e51"
+            ],
+            [
+                "422a366d77cc5222"
+            ],
+            [
+                "d86ebd3ed1764ca9"
+            ],
+            [
+                "a43130e0035be2f1"
+            ],
+            [
+                "03f45f7797826fcd"
+            ],
+            [
+                "ea16e8b0b3ee6d20"
+            ],
+            [
+                "e975c95905743615"
+            ],
+            [
+                "93bdffca508c0c8f"
+            ],
+            [
+                "8583354a8ca53d25"
+            ],
+            [
+                "73a48693dd6d9384"
+            ],
+            [
+                "10c584a6a20cebc2"
+            ]
+        ]
+    },
+    {
+        "id": "7906d9ffa74db954",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Co",
+        "func": "msg.payload = '/home/pi/Ghi_am/27.cobalt.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "6a0f14cf7a4ebe20",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ni",
+        "func": "msg.payload = '/home/pi/Ghi_am/28.nickel.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "a375fbf7b06dcf0e",
+        "type": "inject",
+        "z": "3adad49a4670783e",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "819b2e8139f73318"
+            ]
+        ]
+    },
+    {
+        "id": "ae5f0b3b63af611e",
+        "type": "exec",
+        "z": "3adad49a4670783e",
+        "command": "sudo aplay",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 40,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "819b2e8139f73318",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "khoi dong xong",
+        "func": "msg.payload = '/home/pi/Ghi_am/start.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 40,
+        "wires": [
+            [
+                "ae5f0b3b63af611e"
+            ]
+        ]
+    },
+    {
+        "id": "f41e321e0ba95434",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Cu",
+        "func": "msg.payload = '/home/pi/Ghi_am/29.copper.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "636a2fd92fbb8876",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Y",
+        "func": "msg.payload = '/home/pi/Ghi_am/39.yttrium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "868b370cc22b840a",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Rb",
+        "func": "msg.payload = '/home/pi/Ghi_am/37.rubidium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "5452a0ad6b7a74cb",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Zn",
+        "func": "msg.payload = '/home/pi/Ghi_am/30.Zinc.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "4b167b5af7ff6c12",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ga",
+        "func": "msg.payload = '/home/pi/Ghi_am/31.Gallium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "72a93934df14327e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ge",
+        "func": "msg.payload = '/home/pi/Ghi_am/32.Germannium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "06e7e430d9715d32",
+        "type": "debug",
+        "z": "3adad49a4670783e",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d422d4b763383da4",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Os",
+        "func": "msg.payload = '/home/pi/Ghi_am/76.Osmium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "c368e887130df448",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ir",
+        "func": "msg.payload = '/home/pi/Ghi_am/77.Iridium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ca3e359b5a0aa86e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Boron",
+        "func": "msg.payload = '/home/pi/Ghi_am/5.boron.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "f9accb383ab5d423",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "cacbon",
+        "func": "msg.payload = '/home/pi/Ghi_am/6.carbon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "578fedbf42adcfa7",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "nitow",
+        "func": "msg.payload = '/home/pi/Ghi_am/7.nitrogen.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "39dece216ccfc5cc",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "oxy",
+        "func": "msg.payload = '/home/pi/Ghi_am/8.oxygen.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d7a254acf3387d9e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "flo",
+        "func": "msg.payload = '/home/pi/Ghi_am/9.fluorine.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "02e756d244d54ca7",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "silic",
+        "func": "msg.payload = '/home/pi/Ghi_am/14.silicon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "f476945c68441b53",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "cl",
+        "func": "msg.payload = '/home/pi/Ghi_am/17.chlorine.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e77c0f6d7a954d22",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "As",
+        "func": "msg.payload = '/home/pi/Ghi_am/33.arsenic.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "827e26bb15a5b1f6",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Se",
+        "func": "msg.payload = '/home/pi/Ghi_am/34.selenium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "8f7801126446c4ed",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "P",
+        "func": "msg.payload = '/home/pi/Ghi_am/15.phosphorus.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "2768d668cd590177",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "S",
+        "func": "msg.payload = '/home/pi/Ghi_am/16.sulfur.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 800,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "22589781e7e99763",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "BR",
+        "func": "msg.payload = '/home/pi/Ghi_am/35.brommine.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "f20b1ec55dd85441",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "TE",
+        "func": "msg.payload = '/home/pi/Ghi_am/52.tellurium.wav'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "f6fd54c3b3591e3a",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "I",
+        "func": "msg.payload = '/home/pi/Ghi_am/53.iodine.wav'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3da41fd57214409e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "At",
+        "func": "msg.payload = '/home/pi/Ghi_am/85.Astatine.wav'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "6e6b1c5efa4f53b9",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "H",
+        "func": "msg.payload = '/home/pi/Ghi_am/1.hydrogen.wav'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "a626a955f20d85ce",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "He",
+        "func": "msg.payload = '/home/pi/Ghi_am/2.helium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d57c6d73f1049c19",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Rn",
+        "func": "msg.payload = '/home/pi/Ghi_am/86.Radon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "2ffaa7e5b97a7ad3",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ne",
+        "func": "msg.payload = '/home/pi/Ghi_am/10.neon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 800,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "61634ba5cc1c8467",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Og",
+        "func": "msg.payload = '/home/pi/Ghi_am/118.Oganesson.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "1dddb5399a206327",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ar",
+        "func": "msg.payload = '/home/pi/Ghi_am/18.argon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "deec9dc7495b2e01",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Kr",
+        "func": "msg.payload = '/home/pi/Ghi_am/81.thallium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "847b6065879132b7",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Xe",
+        "func": "msg.payload = '/home/pi/Ghi_am/54.xenon.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "8b589431d97d8580",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Esc",
+        "func": "msg.payload = '/home/pi/Ghi_am/3.lithium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "fcca3789fe078c5f",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Be",
+        "func": "msg.payload = '/home/pi/Ghi_am/4.Beryllium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "2325a9794af7d326",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Na",
+        "func": "msg.payload = '/home/pi/Ghi_am/11.sodium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e8f2499412355174",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Mg",
+        "func": "msg.payload = '/home/pi/Ghi_am/12.magnesium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "9b123f5c527d2bd7",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Al",
+        "func": "msg.payload = '/home/pi/Ghi_am/13.aluminium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "c27b7edbb098c652",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "K",
+        "func": "msg.payload = '/home/pi/Ghi_am/19.potasssium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "dd7ba79055ae5a7e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ca",
+        "func": "msg.payload = '/home/pi/Ghi_am/calcium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 681.4285888671875,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "f8e22d1935fef1f3",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Sc",
+        "func": "msg.payload = '/home/pi/Ghi_am/21.scandium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "7b58c18de78bb112",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ti",
+        "func": "msg.payload = '/home/pi/Ghi_am/22.titanium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "753a12fc5a67e811",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "V",
+        "func": "msg.payload = '/home/pi/Ghi_am/23.vanadium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 799.419677734375,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e7f221fad4b760c6",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Cr",
+        "func": "msg.payload = '/home/pi/Ghi_am/24.choromium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "8391ac8c9c04a14f",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Mn",
+        "func": "msg.payload = '/home/pi/Ghi_am/25.manganese.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "4cb2c8de2e509a5d",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Fe",
+        "func": "msg.payload = '/home/pi/Ghi_am/26.iron.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "c5553cf2167ebf42",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Sr",
+        "func": "msg.payload = '/home/pi/Ghi_am/38.strontium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3346150bd022c9bf",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Zr",
+        "func": "msg.payload = '/home/pi/Ghi_am/40.zirconium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e30a87902572ff72",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Nb",
+        "func": "msg.payload = '/home/pi/Ghi_am/41.niobium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 800,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "01f3204463a58b43",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Mo",
+        "func": "msg.payload = '/home/pi/Ghi_am/42.molybdenum.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3579ddac2bba44e5",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Tc",
+        "func": "msg.payload = '/home/pi/Ghi_am/43.technetium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "906f19c2e3661f0b",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ru",
+        "func": "msg.payload = '/home/pi/Ghi_am/44.ruthenium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e6cd7e2bdd194633",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Rh",
+        "func": "msg.payload = '/home/pi/Ghi_am/45.rhodium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "589550fb8005ab5e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Pd",
+        "func": "msg.payload = '/home/pi/Ghi_am/46.paladium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "52e61eed8b1a59de",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ag",
+        "func": "msg.payload = '/home/pi/Ghi_am/47.silver.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "60b01a53052b10cf",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Cd",
+        "func": "msg.payload = '/home/pi/Ghi_am/48.cadmium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "11eaaf9e26d9125a",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "In",
+        "func": "msg.payload = '/home/pi/Ghi_am/49.indium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ac4c8aaf2c620ad0",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Sn",
+        "func": "msg.payload = '/home/pi/Ghi_am/50.tin.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ea387d152ad0a632",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Sb",
+        "func": "msg.payload = '/home/pi/Ghi_am/51.antimony.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d33542ad994e5ae1",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Cs",
+        "func": "msg.payload = '/home/pi/Ghi_am/55.caesium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "43e64a38182fd00f",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ba",
+        "func": "msg.payload = '/home/pi/Ghi_am/56.barium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "534fb0d44894b110",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "La",
+        "func": "msg.payload = '/home/pi/Ghi_am/57.lanthanum.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "8a75ddae64709455",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Hf",
+        "func": "msg.payload = '/home/pi/Ghi_am/72.Hafnium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "dcca75a3e751e6ab",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ta",
+        "func": "msg.payload = '/home/pi/Ghi_am/73.Tantalum.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e28560c1f9dcf6fa",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "W",
+        "func": "msg.payload = '/home/pi/Ghi_am/74.Tungsten.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3e1a4c564f447dfe",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Re",
+        "func": "msg.payload = '/home/pi/Ghi_am/75.Rhenium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "77a2df5ca4cb5dd7",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Pt",
+        "func": "msg.payload = '/home/pi/Ghi_am/78.platinum.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 800,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d032371fdb45a078",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Au",
+        "func": "msg.payload = '/home/pi/Ghi_am/79.gold.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "96e01dd5ac19e798",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Hg",
+        "func": "msg.payload = '/home/pi/Ghi_am/80.mercury.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "34aecb727aa3cbdb",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ti",
+        "func": "msg.payload = '/home/pi/Ghi_am/81.thallium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ca6a51cbea78c188",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Pb",
+        "func": "msg.payload = '/home/pi/Ghi_am/82.Lead.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "10d41e827f13b7c0",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Bi",
+        "func": "msg.payload = '/home/pi/Ghi_am/83.Bismuth.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e6c71cefcf1d4c80",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Po",
+        "func": "msg.payload = '/home/pi/Ghi_am/84.Polonium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "5b03a4c2fddac5ec",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Fr",
+        "func": "msg.payload = '/home/pi/Ghi_am/87.Francium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d95af7bed08d3fac",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ra",
+        "func": "msg.payload = '/home/pi/Ghi_am/88.Radium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "efb6a146897fae2d",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ac",
+        "func": "msg.payload = '/home/pi/Ghi_am/89.Actinium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "6ac927de1d92db95",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Rf",
+        "func": "msg.payload = '/home/pi/Ghi_am/104.Rutherfordium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "b4701d3cdfb6d82f",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Db",
+        "func": "msg.payload = '/home/pi/Ghi_am/105.Dubnium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "29bc6c7d27587f08",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Sg",
+        "func": "msg.payload = '/home/pi/Ghi_am/106.Seaborgium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3dc28bbc06aa461e",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Bh",
+        "func": "msg.payload = '/home/pi/Ghi_am/107.Bohrium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "615cf48b7c5acea6",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Hs",
+        "func": "msg.payload = '/home/pi/Ghi_am/108.Hassium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "110267da276f917c",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Mt",
+        "func": "msg.payload = '/home/pi/Ghi_am/109.Meitnerium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ef7d4c9261020d89",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ds",
+        "func": "msg.payload = '/home/pi/Ghi_am/110.Darmstadtium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 800,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "3f6793a828e5b7d4",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Rg",
+        "func": "msg.payload = '/home/pi/Ghi_am/111.Roentgenium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 840,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d9efd4a6fa26ebfd",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Cn",
+        "func": "msg.payload = '/home/pi/Ghi_am/112.Copernicium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 880,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "63a017734a1a448d",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Nh",
+        "func": "msg.payload = '/home/pi/Ghi_am/113.Nihonium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 920,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "9986b08d9cd0e1b6",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Fi",
+        "func": "msg.payload = '/home/pi/Ghi_am/114.Flerovium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 960,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "0b76833efae27ec6",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Mc",
+        "func": "msg.payload = '/home/pi/Ghi_am/115.Moscovium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "c558653dee43907c",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Lv",
+        "func": "msg.payload = '/home/pi/Ghi_am/116.Livermorium.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "18ee3e553f52c566",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "Ts",
+        "func": "msg.payload = '/home/pi/Ghi_am/117.Tennessine.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "c7906f6d7a2d0e51",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "BaHCO3",
+        "func": "msg.payload = '/home/pi/Ghi_am/bariumhydrogencarbonate.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 360,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "422a366d77cc5222",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "CO",
+        "func": "msg.payload = '/home/pi/Ghi_am/carbonmonoxide.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 400,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "d86ebd3ed1764ca9",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "H2CO3",
+        "func": "msg.payload = '/home/pi/Ghi_am/carbonicacid.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 440,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "a43130e0035be2f1",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "BaOH2",
+        "func": "msg.payload = '/home/pi/Ghi_am/bariumhydroxide.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 480,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "03f45f7797826fcd",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "FeCl3",
+        "func": "msg.payload = '/home/pi/Ghi_am/ironIIIchloride.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 520,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ea16e8b0b3ee6d20",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "FeOH3",
+        "func": "msg.payload = '/home/pi/Ghi_am/ironIIIhydroxide.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 560,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "e975c95905743615",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "HNO3",
+        "func": "msg.payload = '/home/pi/Ghi_am/nitricacid.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 600,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "93bdffca508c0c8f",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "H3PO4",
+        "func": "msg.payload = '/home/pi/Ghi_am/Phosphoricacid.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 640,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "8583354a8ca53d25",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "KMnO4",
+        "func": "msg.payload = '/home/pi/Ghi_am/potassiumpermanganate.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 680,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "73a48693dd6d9384",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "SO2",
+        "func": "msg.payload = '/home/pi/Ghi_am/sulfurdioxide.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1670,
+        "y": 720,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "10c584a6a20cebc2",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "H2SO4",
+        "func": "msg.payload = '/home/pi/Ghi_am/Sulfuricacid.wav';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 760,
+        "wires": [
+            [
+                "7f9649753b650996"
+            ]
+        ]
+    },
+    {
+        "id": "ef50dc60fa0a4f79",
+        "type": "function",
+        "z": "3adad49a4670783e",
+        "name": "TEN_PHIM",
+        "func": "var key = msg.payload;\nvar phim = \"None\";\nswitch (key) {\n    case 0:\n        phim = \"Sunday\";\n        break;\n    case 1:\n        phim = \"Monday\";\n        break;\n    case 2:\n        phim = \"Tuesday\";\n        break;\n    case 3:\n        phim = \"Wednesday\";\n        break;\n    case 4:\n        phim = \"Thursday\";\n        break;\n    case 5:\n        phim = \"Friday\";\n        break;\n    case 6:\n        phim = \"Saturday\";\n}\n\n\nmsg.payload = phim;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 40,
+        "wires": [
+            [
+                "81e3c61e366247a7"
+            ]
+        ]
+    },
+    {
+        "id": "81e3c61e366247a7",
+        "type": "ui_template",
+        "z": "3adad49a4670783e",
+        "group": "230f8a8485793254",
+        "name": "",
+        "order": 2,
+        "width": "14",
+        "height": "10",
+        "format": "<div>phim vua bam</div>\n\n<div style=\"font-size: 120px;\" ng-bind-html=\"msg.payload\"></div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1280,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    }
+]
